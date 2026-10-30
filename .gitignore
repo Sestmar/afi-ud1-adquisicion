@@ -1,0 +1,33 @@
+# Material del curso (no es la entrega)
+*.docx
+*.pdf
+!acta-adquisicion.pdf
+!registro-custodia.pdf
+
+# Máquinas, discos e imágenes: no se suben
+*.ova
+*.ovf
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+*.vmx
+*.nvram
+*.vmsd
+*.vmxf
+*.iso
+*.E01
+*.E02
+*.Ex01
+*.dd
+*.raw
+*.dmp
+*.lime
+*.pcap
+*.pcapng
+*.zip
+
+salida/
+_local/
+Thumbs.db
+.DS_Store
