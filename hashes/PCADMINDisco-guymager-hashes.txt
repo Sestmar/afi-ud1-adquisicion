@@ -1,0 +1,4 @@
+MD5  55ade5b44b4b0156c6303f5867fad086  PCADMINDisco (imagen = verificado)
+SHA256  ead1bbdb0b81228739a20792ff1a897906411a7bd8bfd7664c88616071a44fb1  PCADMINDisco (imagen = verificado)
+Fuente  /dev/sdc  34359738368 bytes
+Estado  Finished successfully / Image verification OK

@@ -1,0 +1,133 @@
+
+GUYMAGER ACQUISITION INFO FILE
+==============================
+
+Guymager
+========
+
+Version            : 0.8.13-1                                                                                       
+Version timestamp  : 2021-08-04-17.00.00 UTC                                                                        
+Compiled with      : gcc 8.3.0                                                                                      
+libewf version     : 20140804 (not used as Guymager is configured to use its own EWF module)                        
+libguytools version: 2.1.0                                                                                          
+Host name          : caine                                                                                          
+Domain name        : (none)                                                                                         
+System             : Linux caine 6.8.0-52-generic #53-Ubuntu SMP PREEMPT_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86_64
+
+
+Device information
+==================
+Command executed: bash -c "search="`basename /dev/sdb`: H..t P.......d A..a de.....d" && dmesg | grep -A3 "$search" || echo "No kernel HPA messages for /dev/sdb""
+Information returned:
+----------------------------------------------------------------------------------------------------
+   No kernel HPA messages for /dev/sdb
+
+Command executed: bash -c "smartctl -s on /dev/sdb ; smartctl -a /dev/sdb"
+Information returned:
+----------------------------------------------------------------------------------------------------
+   smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-52-generic] (local build)
+   Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+   
+   === START OF ENABLE/DISABLE COMMANDS SECTION ===
+   unable to fetch IEC (SMART) mode page [unsupported field in scsi command]
+   A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+   smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-52-generic] (local build)
+   Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+   
+   === START OF INFORMATION SECTION ===
+   Vendor:               VMware,
+   Product:              VMware Virtual S
+   Revision:             1.0
+   User Capacity:        34.359.738.368 bytes [34,3 GB]
+   Logical block size:   512 bytes
+   Rotation Rate:        Solid State Device
+   Device type:          disk
+   Local Time is:        Sat Oct 31 16:35:20 2026 GMT
+   SMART support is:     Unavailable - device lacks SMART capability.
+   
+   === START OF READ SMART DATA SECTION ===
+   Current Drive Temperature:     0 C
+   Drive Trip Temperature:        0 C
+   
+   Error Counter logging not supported
+   
+   Device does not support Self Test logging
+
+Command executed: bash -c "hdparm -I /dev/sdb"
+Information returned:
+----------------------------------------------------------------------------------------------------
+   /dev/sdb:
+   
+   ATA device, with non-removable media
+   Standards:
+   	Likely used: 1
+   Configuration:
+   	Logical		max	current
+   	cylinders	0	0
+   	heads		0	0
+   	sectors/track	0	0
+   	--
+   	Logical/Physical Sector size:           512 bytes
+   	device size with M = 1024*1024:           0 MBytes
+   	device size with M = 1000*1000:           0 MBytes 
+   	cache/buffer size  = unknown
+   Capabilities:
+   	IORDY not likely
+   	Cannot perform double-word IO
+   	R/W multiple sector transfer: not supported
+   	DMA: not supported
+   	PIO: pio0
+
+Command executed: bash -c "CIDFILE=/sys/block/$(basename /dev/sdb)/device/cid; echo -n "CID: " ; if [ -e $CIDFILE ] ; then cat $CIDFILE  ; else echo "not available" ; fi "
+Information returned:
+----------------------------------------------------------------------------------------------------
+   CID: not available
+
+Hidden areas: unknown
+
+
+Acquisition
+===========
+
+Linux device            : /dev/sdb                                                                
+Device size             : 34359738368 (34,4GB)                                                    
+Format                  : Expert Witness Format, sub-format Guymager - file extension is .Exx     
+Image meta data         
+   Case number          : ALMADRABA-PC-ADMIN                                                      
+   Evidence number      : 1                                                                       
+   Examiner             : Sergio Estudillo Marabot                                                
+   Description          : Disco completo FORENSIC_10 FORENSE-06                                   
+   Notes                : Post-mortem CAINE 14, disco Independent Nonpersistent                   
+Image path and file name: /media/philips/USB-RESPUESTA/salida/ALMADRABA-PC-ADMIN/PCADMINdisco.Exx 
+Info  path and file name: /media/philips/USB-RESPUESTA/salida/ALMADRABA-PC-ADMIN/PCADMINdisco.info
+Hash calculation        : MD5 and SHA-256                                                         
+Source verification     : off                                                                     
+Image verification      : on                                                                      
+
+No bad sectors encountered during acquisition.
+State: Aborted because of image read error during verification
+
+MD5 hash                   : 55ade5b44b4b0156c6303f5867fad086                                
+MD5 hash verified source   : --                                                              
+MD5 hash verified image    : --                                                              
+SHA1 hash                  : --                                                              
+SHA1 hash verified source  : --                                                              
+SHA1 hash verified image   : --                                                              
+SHA256 hash                : ead1bbdb0b81228739a20792ff1a897906411a7bd8bfd7664c88616071a44fb1
+SHA256 hash verified source: --                                                              
+SHA256 hash verified image : --                                                              
+
+Acquisition started : 2026-10-31 16:35:20 (ISO format YYYY-MM-DD HH:MM:SS)    
+Verification started: 2026-10-31 16:45:19                                     
+Ended               : 2026-10-31 16:46:00 (0 hours, 10 minutes and 40 seconds)
+Acquisition speed   : 54.70 MByte/s (0 hours, 9 minutes and 59 seconds)       
+Verification speed  : 799.22 MByte/s (0 hours, 0 minutes and 41 seconds)      
+
+
+Generated image files and their MD5 hashes
+==========================================
+
+No MD5 hashes available (configuration parameter CalcImageFileMD5 is off)
+MD5                               Image file
+
+Acquisition/verification aborted - file list may be incomplete

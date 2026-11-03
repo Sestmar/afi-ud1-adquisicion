@@ -1,0 +1,7 @@
+# Copia de trabajo = maestra (sha256sum de cada trozo EWF)
+2810093c9ea09be4a7c9b670623bf163c111eaf7eaa520c8160a8d4d21135f3a  PCADMINDisco.E01
+11b3ef60c44135a1cec4e1d2d538e94c7080887858fe397d0ab7f95278f641b0  PCADMINDisco.E02
+3cab12953e5a2f873c051bc38c7b63907c4bec93b9b5c50ade321415bb19f2e0  PCADMINDisco.E03
+# Misma tripla en /media/e01/copia-trabajo/
+# Hash de contenido Guymager (E01 logica):
+# SHA256 ead1bbdb0b81228739a20792ff1a897906411a7bd8bfd7664c88616071a44fb1
