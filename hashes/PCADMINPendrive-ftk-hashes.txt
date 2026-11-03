@@ -1,0 +1,67 @@
+﻿Created By Exterro® FTK® Imager 8.3.0.27 
+
+Case Information: 
+Case Number: ALMADRABA-PC-ADMIN
+Evidence Number: 2
+Unique description: Pendrive encontrado en la escena - Philips UFD 32GB
+Examiner: Sergio Estudillo Marabot
+Notes: Adquisicion post-mortem con bloqueo de escritura por software (bloqueo-usb.ps1)
+Encrypted Password : N/A
+
+Computer Name: LAPTOP-8VI2TBCD
+Windows Edition: Windows 11 Home
+Windows Version: Microsoft Windows 6.3.26300.9818
+OS build: 6.3.26300
+Processor: AMD Ryzen 7 5700U with Radeon Graphics         
+Installed RAM: 16 GB
+
+--------------------------------------------------------------
+
+Information for C:\temp-pendrive\PCADMINPendrive:
+
+Physical Evidentiary Item (Source) Information:
+  [Device Info]
+    Source Type: Physical
+  [Drive Geometry]
+    Cylinders: 3.824
+    Tracks per Cylinder: 255
+    Sectors per Track: 63
+    Bytes per Sector: 512
+    Sector Count: 61.440.000
+  [Physical Drive Information]
+    Drive Model: PHILIPS USB Device
+    Drive Serial Number: 5643371227407628126
+    Drive Interface Type: USB
+    Removable drive: True
+    Source data size: 30000 MB
+    Sector count:    61440000
+  [Computed Hashes]
+    MD5 Hash:    1dd4e418b676f5211ff7043d93377f42
+    SHA1 Hash:   88be57900d8c1b206bbb75e28c44007dd9db59f3
+
+Verification Definitions:
+  Computed hash: The hash calculated of the source media during the creation or verify process
+  Stored verification hash: The hash calculated during image acquisition and stored inside the image
+  Report hash: The hash calculated during image acquisition and stored in the image summary report
+
+Image Information:
+  Acquisition started:   Tue Nov  3 10:25:48 2026 (2026-11-03T09:25:48Z)
+  Acquisition finished:  Tue Nov  3 10:45:09 2026 (2026-11-03T09:45:09Z)
+  Segment list:
+    C:\temp-pendrive\PCADMINPendrive.E01
+    C:\temp-pendrive\PCADMINPendrive.E02
+    C:\temp-pendrive\PCADMINPendrive.E03
+    C:\temp-pendrive\PCADMINPendrive.E04
+    C:\temp-pendrive\PCADMINPendrive.E05
+    C:\temp-pendrive\PCADMINPendrive.E06
+    C:\temp-pendrive\PCADMINPendrive.E07
+
+Image Verification Results:
+  Verification started:  Tue Nov  3 10:45:09 2026 (2026-11-03T09:45:09Z)
+  Verification finished: Tue Nov  3 10:47:58 2026 (2026-11-03T09:47:58Z)
+  MD5 - Computed hash:             1dd4e418b676f5211ff7043d93377f42 : verified
+  MD5 - Stored verification hash:  1dd4e418b676f5211ff7043d93377f42 : verified
+  MD5 - Report hash:               1dd4e418b676f5211ff7043d93377f42 : verified
+  SHA1 - Computed hash:            88be57900d8c1b206bbb75e28c44007dd9db59f3 : verified
+  SHA1 - Stored verification hash: 88be57900d8c1b206bbb75e28c44007dd9db59f3 : verified
+  SHA1 - Report hash:              88be57900d8c1b206bbb75e28c44007dd9db59f3 : verified
