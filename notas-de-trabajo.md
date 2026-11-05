@@ -329,6 +329,54 @@ Imagen montada en FTK Imager (host Windows). Fichero `marca-sergioestudillo.txt`
 
 ---
 
+## Parte 4 · Cadena de custodia (05/11/2026)
+
+### Fichero de hashes de todas las evidencias
+
+Las evidencias están en cuatro ubicaciones y no caben juntas (~45 GB; 7,4 GB libres en el host), así que se genera un `hashes.sha256` en cada carpeta con el comando del enunciado:
+
+```bash
+find . -type f ! -name hashes.sha256 -exec sha256sum {} + > hashes.sha256
+```
+
+| Hora | Ubicación | Evidencias | Ficheros |
+|---|---|---|---|
+| 11:32–11:34 | `_local/evidencias-vivo/` (Git Bash) | E02 RAM, E03 triaje, E05 cifrado | 23 |
+| 11:32–11:34 | `C:\temp-pendrive\` (Git Bash) | E09 imagen pendrive, E10 copia | 17 |
+| 11:32–11:34 | `Virtual Machines/FORENSIC_10/` (Git Bash) | E04 `red.pcap`, E06 disco original | 2 |
+| ~12:23 | `/media/e01/` (VM CAINE) | E07 imagen disco, E08 copia | 8 |
+
+En `FORENSIC_10/` no se usa `find`, porque hashearía también los ficheros de configuración de la VM. Se ejecuta `sha256sum red.pcap FORENSIC_10-disk1.vmdk > hashes.sha256`.
+
+Antes de la entrega se cotejan con los hashes de la adquisición: RAM, `red.pcap`, disco original (`8c68c5c4…`), segmentos del disco y del pendrive (maestra = copia) coinciden.
+
+En el repo: `hashes/hashes.sha256`, con las 50 líneas de las cuatro ubicaciones unificadas (la ubicación va como prefijo de la ruta).
+
+**Montaje del disco destino en CAINE:** CAINE arranca con todos los discos en solo lectura. Se identifica el disco con `lsblk -f` (`sdb` = FORENSIC_10, no se toca; `sdc1` = `E01DEST`) y se desbloquea solo el destino:
+
+```bash
+sudo blockdev --setrw /dev/sdc /dev/sdc1
+sudo mount LABEL=E01DEST /media/e01
+```
+
+### Entrega al compañero y devolución
+
+Las evidencias no caben en un USB, así que se transfiere el control del equipo, no los datos. Jesús Pedreño se sienta en el equipo del examinador y ejecuta él mismo la comprobación; el examinador no toca el teclado mientras tanto.
+
+| Hora | Paso |
+|---|---|
+| 13:00 | Entrega: Jesús Pedreño toma el control del equipo |
+| 13:00–13:17 | Jesús ejecuta `sha256sum -c hashes.sha256` en las cuatro carpetas |
+| 13:18 | Devolución al examinador |
+
+Resultado: **50/50 OK** (8 + 23 + 17 + 2), ningún `FAILED`. Salida: `hashes/verificacion-companero.txt`. Captura: `29-verificacion-companero-e01dest.png`.
+
+Entrega y devolución firmadas por los dos en los nueve registros de `registro-custodia.pdf` (E02–E10).
+
+**Verificación cruzada:** en la misma sesión, el examinador verificó las evidencias de Jesús Pedreño (su USB, partición `USB-RESP` montada en CAINE con `mount -o ro`): 54/54 OK, 12:50–13:11.
+
+---
+
 ## Incidencias y decisiones
 
 | # | Incidencia | Decisión tomada |
@@ -343,3 +391,5 @@ Imagen montada en FTK Imager (host Windows). Fichero `marca-sergioestudillo.txt`
 | 8 | $MFT en vivo: copia fallida | $MFT obtenido de la imagen E01 |
 | 9 | No hay segundo pendrive | Profesor autorizó usar el mismo Philips UFD; documentado |
 | 10 | Marca en pendrive creada desde host (VM apagada) | Contenido idéntico al fichero original; documentado en acta |
+| 11 | Evidencias (~45 GB) en cuatro ubicaciones; no caben en un USB ni en el host | Un `hashes.sha256` por ubicación; el compañero verifica en el equipo del examinador |
+| 12 | CAINE monta el disco destino en solo lectura | `blockdev --setrw` solo sobre `sdc` (E01DEST); el disco evidencia `sdb` no se toca |

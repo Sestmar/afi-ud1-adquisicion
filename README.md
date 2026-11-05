@@ -7,9 +7,10 @@ Adquisición en vivo y post-mortem del equipo de administración de Almadraba Di
 
 ## Ficheros de la entrega
 
+- [notas-de-trabajo.md](notas-de-trabajo.md): cuaderno de la intervención, en orden y con la hora de cada paso, incluida la entrega al compañero.
 - [acta-adquisicion.pdf](acta-adquisicion.pdf): plantilla del acta rellena y firmada, con cada paso en el orden real, empezando por la marca.
 - [registro-custodia.pdf](registro-custodia.pdf): registro de cadena de custodia, con la entrega al compañero, la devolución y las firmas de los dos.
-- [hashes/](hashes/): hashes de todas las evidencias y registros de las herramientas (`.info` de Guymager, registro del script, del triaje…).
+- [hashes/](hashes/): hashes de todas las evidencias (entre ellos, [hashes.sha256](hashes/hashes.sha256), con los 50 ficheros), la verificación del compañero ([verificacion-companero.txt](hashes/verificacion-companero.txt), 50/50 OK) y los registros de las herramientas (log de FTK Imager, `bloqueo-usb.log`…).
 - [capturas/](capturas/): pantalla inicial; marca encontrada en la RAM, en el triaje y en la imagen; verificación final de la imagen.
 
 Las evidencias (volcado de RAM, PCAP, triaje, imagen E01) no se suben: ocupan gigas.

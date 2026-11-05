@@ -1,0 +1,66 @@
+# Verificación de las evidencias por el compañero (Jesús Pedreño)
+# 05/11/2026, 13:00–13:18 (UTC+1), en el equipo del examinador.
+# Ejecutado por Jesús Pedreño: sha256sum -c hashes.sha256 en cada carpeta.
+# Resultado total: 50/50 OK (8 + 23 + 17 + 2), ningún FAILED.
+
+## VM CAINE: /media/e01 (captura 29)
+$ cd /media/e01 && sha256sum -c hashes.sha256
+./PCADMINDisco.E01: OK
+./PCADMINDisco.info: OK
+./PCADMINDisco.E03: OK
+./PCADMINDisco.E02: OK
+./copia-trabajo/PCADMINDisco.E01: OK
+./copia-trabajo/PCADMINDisco.info: OK
+./copia-trabajo/PCADMINDisco.E03: OK
+./copia-trabajo/PCADMINDisco.E02: OK
+
+## Git Bash: _local/evidencias-vivo
+$ sha256sum -c hashes.sha256
+./cifrado_manage-bde.txt: OK
+./PC-ADMIN-ram.raw: OK
+./triaje/01_fecha.txt: OK
+./triaje/02_netstat.txt: OK
+./triaje/03_arp.txt: OK
+./triaje/04_dns_cache.txt: OK
+./triaje/05_ipconfig.txt: OK
+./triaje/06_rutas.txt: OK
+./triaje/07_netbios.txt: OK
+./triaje/08_procesos_tasklist.txt: OK
+./triaje/09_procesos_detalle.txt: OK
+./triaje/10_sesiones.txt: OK
+./triaje/11_whoami.txt: OK
+./triaje/12_recursos_compartidos.txt: OK
+./triaje/20_systeminfo.txt: OK
+./triaje/21_hostname.txt: OK
+./triaje/22_servicios.txt: OK
+./triaje/23_tareas.txt: OK
+./triaje/24_bcdedit.txt: OK
+./triaje/25_discos.txt: OK
+./triaje/26_usuarios.txt: OK
+./triaje/27_drivers.txt: OK
+./triaje/28_autoruns_reg.txt: OK
+
+## Git Bash: C:/temp-pendrive
+$ sha256sum -c hashes.sha256
+./copia-trabajo/PCADMINPendrive.E01: OK
+./copia-trabajo/PCADMINPendrive.E02: OK
+./copia-trabajo/PCADMINPendrive.E03: OK
+./copia-trabajo/PCADMINPendrive.E04: OK
+./copia-trabajo/PCADMINPendrive.E05: OK
+./copia-trabajo/PCADMINPendrive.E06: OK
+./copia-trabajo/PCADMINPendrive.E07: OK
+./PCADMINPendrive.E01: OK
+./PCADMINPendrive.E01.txt: OK
+./PCADMINPendrive.E02: OK
+./PCADMINPendrive.E03: OK
+./PCADMINPendrive.E04: OK
+./PCADMINPendrive.E05: OK
+./PCADMINPendrive.E06: OK
+./PCADMINPendrive.E07: OK
+./pendrive-copia-trabajo.sha256: OK
+./pendrive-maestra.sha256: OK
+
+## Git Bash: Virtual Machines/FORENSIC_10
+$ sha256sum -c hashes.sha256
+red.pcap: OK
+FORENSIC_10-disk1.vmdk: OK
